@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Learn about Vaishali Electricals & Solar and explore solar energy and electrical solutions for residential, commercial and industrial requirements.">
+
+    <meta name="keywords"
+        content="Vaishali Electricals, Solar Solutions, Solar Installation, Electrical Services, Industrial Electrification, Pune, Maharashtra">
+
+    <meta name="author" content="Vaishali Electricals & Solar">
+
+    <meta property="og:title" content="About Vaishali Electricals & Solar">
+    <meta property="og:description"
+        content="Solar and electrical solutions for residential, commercial and industrial requirements.">
+    <meta property="og:image" content="images/solar1-3.jpeg">
+
+    <title>About Vaishali Electricals &amp; Solar | Solar &amp; Electrical Solutions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- About Page CSS -->
+    <link href="css/about-page.css" rel="stylesheet">
+
+    <!-- Small professional CTA enhancement -->
+    <style>
+        /* =========================================
+           PROFESSIONAL CONTACT CTA
+        ========================================= */
+
+        .about-contact-cta {
+            position: relative;
+            overflow: hidden;
+            padding: 90px 0;
+            background:
+                linear-gradient(135deg,
+                    rgba(8, 30, 55, 0.98),
+                    rgba(12, 56, 82, 0.96));
+            color: #fff;
+        }
+
+        .about-contact-cta::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(255, 193, 7, 0.08);
+            top: -220px;
+            right: -120px;
+            pointer-events: none;
+        }
+
+        .about-contact-cta::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 193, 7, 0.05);
+            bottom: -180px;
+            left: -100px;
+            pointer-events: none;
+        }
+
+        .about-contact-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-contact-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.07);
+            color: #ffc107;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-contact-content h2 {
+            margin: 0 auto 16px;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.12;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .about-contact-content h2 span {
+            color: #ffc107;
+        }
+
+        .about-contact-content p {
+            max-width: 680px;
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .about-contact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 190px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            background: #ffc107;
+            color: #101820;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+            transition: all 0.3s ease;
+        }
+
+        .about-contact-button:hover {
+            background: #fff;
+            color: #101820;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.24);
+        }
+
+        .about-contact-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .about-contact-button:hover i {
+            transform: translateX(4px);
+        }
+
+        /* =========================================
+           MOBILE CTA
+        ========================================= */
+
+        @media (max-width: 767px) {
+            .about-contact-cta {
+                padding: 70px 20px;
+            }
+
+            .about-contact-content h2 {
+                font-size: 32px;
+            }
+
+            .about-contact-content p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .about-contact-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* =========================================
+           ACCESSIBILITY
+        ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .about-contact-button,
+            .about-contact-button i {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="about-page">
+
+    <!-- =========================================
+         HEADER / NAVBAR
+    ========================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="brand" href="index.html" aria-label="Vaishali Electricals & Solar home">
+
+                    <img class="brand-mark" src="images/logo.jpeg" alt="Vaishali Electricals logo">
+
+                    <span>
+                        <strong>Vaishali Electricals</strong>
+                        <small>Solar &amp; Electrical Solutions</small>
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+
+                </button>
+
+
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#about" aria-current="page">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-cta" href="#contact">
+                                Get a quote
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <section class="about-hero" aria-labelledby="heroTitle">
+
+            <div class="about-hero-overlay" aria-hidden="true">
+            </div>
+
+            <div class="container about-hero-content">
+
+                <p class="hero-label">
+                    SOLAR &amp; ELECTRICAL SOLUTIONS
+                </p>
+
+                <h1 id="heroTitle">
+                    Powering Your Future With
+                    <span>Clean Energy</span>
+                </h1>
+
+                <p class="about-hero-copy">
+                    Premium solar energy and electrical solutions
+                    for residential, commercial and industrial needs.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a class="btn btn-yellow" href="#services">
+
+                        Explore Our Services
+
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a class="btn btn-outline-light" href="#contact">
+
+                        Get a Free Consultation
+
+                    </a>
+
+                </div>
+
+                <p class="about-hero-location">
+
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+                    Maharashtra, India
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             ABOUT STORY
+        ========================================== -->
+
+        <section class="about-story light-section section-space" id="about" aria-labelledby="aboutTitle">
+
+            <div class="container">
+
+                <div class="row g-5 align-items-center">
+
+
+                    <!-- Image -->
+                    <div class="col-lg-6 reveal">
+
+                        <div class="about-story-visual">
+
+                            <img src="images/solar1-3.jpeg" alt="Solar panels installed for clean energy generation"
+                                loading="lazy">
+
+                            <div class="about-story-caption">
+
+                                <i class="fa-solid fa-solar-panel" aria-hidden="true"></i>
+
+                                <span>
+                                    Solar &amp; Electrical Solutions
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Content -->
+                    <div class="col-lg-6 reveal">
+
+                        <p class="eyebrow">
+                            ABOUT VAISHALI ELECTRICALS
+                        </p>
+
+                        <h2 class="section-heading" id="aboutTitle">
+
+                            Practical solutions for a changing
+                            energy landscape.
+
+                        </h2>
+
+                        <p class="muted">
+                            Vaishali Electricals provides solar and
+                            electrical solutions for residential,
+                            commercial, industrial and project
+                            requirements.
+                        </p>
+
+                        <p class="muted">
+                            From solar systems to electrical contracting
+                            and industrial electrification, we help
+                            customers explore products and solutions
+                            suited to their project needs.
+                        </p>
+
+
+                        <ul class="about-capability-list">
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                Solar energy systems
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                Electrical solutions
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                Residential, commercial &amp;
+                                industrial projects
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                Project and material support
+                            </li>
+
+                        </ul>
+
+
+                        <a class="text-link" href="#contact">
+
+                            Talk through your requirement
+
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SERVICES
+        ========================================== -->
+
+        <section class="light-section section-space about-services" id="services" aria-labelledby="servicesTitle">
+
+            <div class="container">
+
+
+                <div class="section-title reveal">
+
+                    <p class="eyebrow">
+                        WHAT WE DO
+                    </p>
+
+                    <h2 id="servicesTitle">
+                        Energy solutions for every requirement.
+                    </h2>
+
+                    <p>
+                        Explore solar and electrical services for
+                        homes, businesses and industrial projects.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4 service-grid">
+
+
+                    <!-- Service 1 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="onGridSystem.html">
+
+                            <i class="fa-solid fa-solar-panel" aria-hidden="true"></i>
+
+                            <h3>
+                                Solar Installation
+                            </h3>
+
+                            <p>
+                                On-grid, off-grid and hybrid solar
+                                systems for a range of project needs.
+                            </p>
+
+                            <span>
+                                Explore solar
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Service 2 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="electricalservices.html">
+
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+
+                            <h3>
+                                Electrical Solutions
+                            </h3>
+
+                            <p>
+                                Electrical installation and maintenance
+                                solutions for varied requirements.
+                            </p>
+
+                            <span>
+                                Explore services
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Service 3 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="industrialElectrification.html">
+
+                            <i class="fa-solid fa-industry" aria-hidden="true"></i>
+
+                            <h3>
+                                Industrial Projects
+                            </h3>
+
+                            <p>
+                                Electrical work planned around
+                                industrial environments and project needs.
+                            </p>
+
+                            <span>
+                                Explore projects
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Service 4 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="Commercial.html">
+
+                            <i class="fa-solid fa-house" aria-hidden="true"></i>
+
+                            <h3>
+                                Residential Solar
+                            </h3>
+
+                            <p>
+                                Solar options for households considering
+                                a rooftop energy system.
+                            </p>
+
+                            <span>
+                                Explore solutions
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Service 5 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="electricalservices.html">
+
+                            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+
+                            <h3>
+                                Maintenance Services
+                            </h3>
+
+                            <p>
+                                Maintenance support for electrical
+                                systems and solar installations.
+                            </p>
+
+                            <span>
+                                Discuss maintenance
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Service 6 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <a class="service-card" href="#contact">
+
+                            <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
+
+                            <h3>
+                                Energy Consultation
+                            </h3>
+
+                            <p>
+                                Discuss your site, goals and requirements
+                                to explore suitable options.
+                            </p>
+
+                            <span>
+                                Start a conversation
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             WHY CHOOSE US
+        ========================================== -->
+
+        <section class="why-section section-space" aria-labelledby="whyTitle">
+
+            <div class="container">
+
+                <div class="row g-5 align-items-center">
+
+
+                    <!-- Content -->
+                    <div class="col-lg-5 reveal">
+
+                        <p class="eyebrow">
+                            A PRACTICAL PARTNER
+                        </p>
+
+                        <h2 class="section-heading" id="whyTitle">
+
+                            One conversation for your solar
+                            and electrical needs.
+
+                        </h2>
+
+                        <p class="muted light-muted">
+
+                            Choose a solution with the project
+                            context in view, from the type of
+                            property to the way you plan to use energy.
+
+                        </p>
+
+                        <a class="text-link" href="#contact">
+
+                            Discuss your project
+
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Benefits -->
+                    <div class="col-lg-7">
+
+                        <div class="about-benefits-grid">
+
+
+                            <article class="about-benefit reveal">
+
+                                <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+
+                                <h3>
+                                    Product guidance
+                                </h3>
+
+                                <p>
+                                    Explore products and system
+                                    options based on your requirements.
+                                </p>
+
+                            </article>
+
+
+                            <article class="about-benefit reveal">
+
+                                <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+
+                                <h3>
+                                    Installation support
+                                </h3>
+
+                                <p>
+                                    Discuss installation needs for
+                                    solar and electrical work.
+                                </p>
+
+                            </article>
+
+
+                            <article class="about-benefit reveal">
+
+                                <i class="fa-solid fa-building" aria-hidden="true"></i>
+
+                                <h3>
+                                    Multiple applications
+                                </h3>
+
+                                <p>
+                                    Solutions for residential,
+                                    commercial and industrial contexts.
+                                </p>
+
+                            </article>
+
+
+                            <article class="about-benefit reveal">
+
+                                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+
+                                <h3>
+                                    Project coordination
+                                </h3>
+
+                                <p>
+                                    Review the work, materials and
+                                    next steps for your project.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PROJECTS
+        ========================================== -->
+
+        <section class="light-section section-space about-projects" id="projects" aria-labelledby="projectsTitle">
+
+            <div class="container">
+
+
+                <div class="section-title reveal">
+
+                    <p class="eyebrow">
+                        PROJECT GALLERY
+                    </p>
+
+                    <h2 id="projectsTitle">
+                        Solar and electrical work in focus.
+                    </h2>
+
+                    <p>
+                        A selection of project images from
+                        Vaishali Electricals.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/proj1.jpeg" alt="Rooftop solar installation" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    Residential
+                                </span>
+
+                                <h3>
+                                    Rooftop Solar System
+                                </h3>
+
+                                <p>
+                                    Solar installation for a
+                                    residential setting.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Project 2 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/proj2.jpeg" alt="Solar project installation" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    Industrial
+                                </span>
+
+                                <h3>
+                                    Industrial Solar Plant
+                                </h3>
+
+                                <p>
+                                    Solar infrastructure for an
+                                    industrial requirement.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Project 3 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/slr-blur.jpeg" alt="Commercial solar installation" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    Ground Mount
+                                </span>
+
+                                <h3>
+                                    Business Solar Setup
+                                </h3>
+
+                                <p>
+                                    A solar setup for a
+                                    commercial property.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Project 4 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/proj4.jpeg" alt="Solar panel installation" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    GI Shed (Industrial/Warehouses)
+                                </span>
+
+                                <h3>
+                                    Solar Installation
+                                </h3>
+
+                                <p>
+                                    Solar panels and related
+                                    installation work.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Project 5 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/electrical-new.jpeg" alt="Electrical project work" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    Electrical
+                                </span>
+
+                                <h3>
+                                    Electrical Work
+                                </h3>
+
+                                <p>
+                                    Electrical work for project
+                                    requirements.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Project 6 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+
+                        <article class="about-project-card">
+
+                            <img src="images/electrical-new-2.jpeg" alt="Solar energy project" loading="lazy">
+
+                            <div class="about-project-copy">
+
+                                <span>
+                                    Electrical LT Panel Installation
+                                </span>
+
+                                <h3>
+                                    Electrical Work
+                                </h3>
+
+                                <p>
+                                    Industrial / Commercial work.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             NEW PROFESSIONAL CONTACT CTA
+        ========================================== -->
+
+        <section class="about-contact-cta" aria-labelledby="contactCtaTitle">
+
+            <div class="container">
+
+                <div class="about-contact-content reveal">
+
+                    <div class="about-contact-badge">
+
+                        <i class="fa-solid fa-solar-panel" aria-hidden="true"></i>
+
+                        Let's Build Something Better
+
+                    </div>
+
+
+                    <h2 id="contactCtaTitle">
+
+                        Ready to explore your
+                        <span>energy solution?</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Whether you are planning a solar installation,
+                        electrical project or industrial requirement,
+                        connect with Vaishali Electricals &amp; Solar
+                        to discuss your project.
+
+                    </p>
+
+
+                    <!-- REQUIRED BUTTON -->
+                    <a href="contact.html" class="about-contact-button">
+
+                        Get In Touch
+
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer-section">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- Company -->
+                <div class="col-lg-4 footer-box">
+
+                    <div class="footer-logo">
+
+                        <img src="images/logo.jpeg" alt="Vaishali Electricals logo">
+
+                        <div>
+
+                            <strong>
+                                Vaishali Electricals &amp; Solar
+                            </strong>
+
+                            <span>
+                                Solar &amp; Electrical Solutions
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Solar and electrical solutions for
+                        residential, commercial and industrial
+                        requirements.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-2 footer-box">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#projects">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Services -->
+                <div class="col-6 col-lg-3 footer-box">
+
+                    <h4>
+                        Services
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="onGridSystem.html">
+                                Solar installation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="electricalservices.html">
+                                Electrical solutions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="industrialElectrification.html">
+                                Industrial projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="electricalservices.html">
+                                Maintenance
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Energy consultation
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-lg-3 footer-box footer-contact">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+                        <a href="tel:+919421498382">
+                            9421498382
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+                        <a href="tel:+919422119914">
+                            9422119914
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+
+                        <a href="mailto:vaishalielectricals77@gmail.com">
+                            vaishalielectricals77@gmail.com
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+                        Maharashtra, India
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+
+                        <a href="https://wa.me/919421498382" target="_blank" rel="noopener noreferrer">
+
+                            WhatsApp
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Vaishali Electricals &amp; Solar.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <a class="floating-whatsapp"
+        href="https://wa.me/919421498382?text=Hi%20Vaishali%20Electricals%20%26%20Solar%2C%20I%20would%20like%20to%20know%20more%20about%20your%20solar%20and%20electrical%20services."
+        target="_blank" rel="noopener noreferrer" aria-label="Chat with Vaishali Electricals on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Main Website JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

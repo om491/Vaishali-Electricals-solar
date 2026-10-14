@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Industrial Electrification</title>
+<link rel="icon" href="images/logo.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f9ff;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(0,0,0,0.65);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#00d084;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+position:relative;
+}
+
+nav ul li a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#00d084;
+transition:0.4s;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+nav ul li a:hover{
+color:#00d084;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.78)),
+url('./images/Industrial.png');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:760px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-content h1{
+font-size:68px;
+line-height:82px;
+margin-bottom:25px;
+}
+
+.hero-content h1 span{
+color:#00d084;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:34px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 40px;
+background:#00d084;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,208,132,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+background:#00b06f;
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+margin-bottom:15px;
+color:#0d1b2a;
+}
+
+.section-title p{
+font-size:17px;
+color:#666;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#00d084,#0099ff);
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+color:#0d1b2a;
+}
+
+.card p{
+line-height:30px;
+color:#555;
+}
+
+/* IMAGE */
+
+.image-section{
+padding:0 8% 70px;
+}
+
+.image-section img{
+width:100%;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+background:linear-gradient(135deg,#0d1b2a,#1b263b);
+color:white;
+border-radius:30px;
+padding:70px;
+margin-top:50px;
+}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.highlight-card{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.highlight-card:hover{
+transform:translateY(-10px);
+background:#00d084;
+}
+
+/* PROCESS */
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.step{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.step:hover{
+background:#00d084;
+color:white;
+transform:translateY(-8px);
+}
+
+.step span{
+display:inline-block;
+width:65px;
+height:65px;
+line-height:65px;
+border-radius:50%;
+background:#0d1b2a;
+color:white;
+font-size:24px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+margin-top:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+table th{
+background:#00d084;
+color:white;
+padding:18px;
+font-size:17px;
+}
+
+table td{
+padding:18px;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
+table tr:hover{
+background:#f3fff9;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('./images/industrial.png');
+
+background-size:cover;
+background-position:center;
+
+color:white;
+border-radius:30px;
+padding:100px 40px;
+}
+
+.cta h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:850px;
+margin:auto;
+line-height:34px;
+font-size:18px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#081018;
+color:#ccc;
+padding:40px 8%;
+text-align:center;
+margin-top:80px;
+border-top:3px solid #00d084;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:45px;
+line-height:58px;
+}
+
+nav ul{
+display:none;
+}
+
+section{
+padding:80px 5%;
+}
+
+.hero{
+padding:0 5%;
+}
+
+.highlight{
+padding:45px 25px;
+}
+
+.cta h2{
+font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Vaishali <span>Electricals</span>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#benefits">Benefits</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Industrial <span>Electrification</span>
+</h1>
+
+<p>
+Professional industrial electrification solutions including HT/LT systems, power distribution, machinery wiring, control panels, and industrial automation services.
+</p>
+
+<a href="#about" class="hero-btn">
+Explore Services
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>What is Industrial Electrification?</h2>
+
+<p>
+Industrial electrification involves designing, installing, testing, and maintaining electrical systems used in factories, industries, and manufacturing plants.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Power Distribution</h3>
+<p>
+Efficient electrical power distribution systems for industrial operations and heavy machinery.
+</p>
+</div>
+
+<div class="card">
+<h3>Industrial Wiring</h3>
+<p>
+Professional wiring solutions for machines, control panels, motors, and industrial equipment.
+</p>
+</div>
+
+<div class="card">
+<h3>Automation Systems</h3>
+<p>
+Electrical automation systems for improving productivity, safety, and operational efficiency.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE -->
+
+<div class="image-section">
+
+<img src="images/industrial-.png" alt="Industrial Electrification">
+
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+
+<h2>Industrial Electrification Services</h2>
+
+<p>
+Complete industrial electrical solutions for factories and manufacturing plants.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>HT/LT Electrical Systems</h3>
+<p>
+Installation and maintenance of high tension and low tension electrical systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Control Panels</h3>
+<p>
+Design and installation of MCC panels, PCC panels, and automation control systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Industrial Wiring</h3>
+<p>
+Heavy-duty industrial wiring for machinery, production units, and power equipment.
+</p>
+</div>
+
+<div class="card">
+<h3>Cable Laying</h3>
+<p>
+Underground and overhead cable laying with proper safety and protection systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Motor Installation</h3>
+<p>
+Industrial motor installation, testing, alignment, and maintenance services.
+</p>
+</div>
+
+<div class="card">
+<h3>Electrical Safety Systems</h3>
+<p>
+Earthing, lightning protection, fire safety, and industrial electrical safety solutions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section id="benefits">
+
+<div class="highlight">
+
+<div class="section-title">
+
+<h2 style="color:white;">
+Benefits of Industrial Electrification
+</h2>
+
+<p style="color:#ccc;">
+Why modern industrial electrical systems are important for industries.
+</p>
+
+</div>
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<h3>Improved Productivity</h3>
+<p>
+Efficient electrical systems improve machine performance and production output.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Energy Efficiency</h3>
+<p>
+Optimized systems help reduce power consumption and operational costs.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Enhanced Safety</h3>
+<p>
+Professional safety systems reduce electrical hazards and accidents.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Reliable Operations</h3>
+<p>
+Ensures uninterrupted power supply and smooth industrial operations.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="section-title">
+
+<h2>Industrial Electrification Process</h2>
+
+<p>
+Professional workflow followed for industrial electrical projects.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step">
+<span>1</span>
+<h3>Site Survey</h3>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>Load Analysis</h3>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>System Design</h3>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Material Planning</h3>
+</div>
+
+<div class="step">
+<span>5</span>
+<h3>Installation</h3>
+</div>
+
+<div class="step">
+<span>6</span>
+<h3>Testing</h3>
+</div>
+
+<div class="step">
+<span>7</span>
+<h3>Safety Inspection</h3>
+</div>
+
+<div class="step">
+<span>8</span>
+<h3>Commissioning</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- INDUSTRIES -->
+
+<section id="industries">
+
+<div class="section-title">
+
+<h2>Industries We Serve</h2>
+
+<p>
+Industrial electrification solutions for multiple sectors.
+</p>
+
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Industry</th>
+<th>Service</th>
+<th>Application</th>
+</tr>
+
+<tr>
+<td>Manufacturing</td>
+<td>Machine Electrification</td>
+<td>Production Plants</td>
+</tr>
+
+<tr>
+<td>Textile Industry</td>
+<td>Power Distribution</td>
+<td>Textile Factories</td>
+</tr>
+
+<tr>
+<td>Food Industry</td>
+<td>Automation Systems</td>
+<td>Processing Units</td>
+</tr>
+
+<tr>
+<td>Engineering Industry</td>
+<td>HT/LT Systems</td>
+<td>Industrial Plants</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section id="contact">
+
+<div class="cta">
+
+<h2>
+Reliable Industrial Electrical Solutions
+</h2>
+
+<p>
+Get professional industrial electrification services for factories, manufacturing plants, and industrial infrastructure with complete safety and technical expertise.
+</p>
+
+<a href="aboutus.html" class="hero-btn">
+Get Free Consultation
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vaishali Electricals | Industrial Electrification Services
+</p>
+
+</footer>
+
+<!-- JS -->
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav = document.querySelector("nav");
+
+if(window.scrollY > 50){
+nav.style.background="#081018";
+}
+else{
+nav.style.background="rgba(0,0,0,0.65)";
+}
+
+});
+
+</script>
+
+</body>
+</html>

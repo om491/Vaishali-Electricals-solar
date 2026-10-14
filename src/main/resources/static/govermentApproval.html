@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Government Approval Services | Solar Projects</title>
+<link rel="icon" href="images/logo.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f8fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(10px);
+z-index:1000;
+transition:0.4s;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#00d084;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00d084;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:760px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-content h1{
+font-size:68px;
+line-height:84px;
+margin-bottom:25px;
+}
+
+.hero-content h1 span{
+color:#00d084;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:34px;
+margin-bottom:40px;
+color:#ddd;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 40px;
+background:#00d084;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,208,132,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-6px);
+background:#00b86b;
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+margin-bottom:15px;
+color:#081b29;
+}
+
+.section-title p{
+font-size:17px;
+color:#666;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#00d084,#0099ff);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#081b29;
+}
+
+.card p{
+line-height:28px;
+color:#555;
+}
+
+/* PROCESS */
+
+.process{
+background:linear-gradient(135deg,#081b29,#102b44);
+padding:70px;
+border-radius:30px;
+color:white;
+margin-top:40px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.step{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+backdrop-filter:blur(8px);
+transition:0.4s;
+}
+
+.step:hover{
+background:#00d084;
+transform:translateY(-8px);
+}
+
+.step span{
+display:inline-block;
+width:60px;
+height:60px;
+line-height:60px;
+background:white;
+color:#081b29;
+border-radius:50%;
+font-size:24px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+margin-top:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+table th{
+background:#00d084;
+color:white;
+padding:18px;
+font-size:17px;
+}
+
+table td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+table tr:hover{
+background:#f1fff9;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+background:linear-gradient(135deg,#00d084,#0099ff);
+padding:70px;
+border-radius:30px;
+color:white;
+text-align:center;
+}
+
+.highlight h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.highlight p{
+max-width:900px;
+margin:auto;
+line-height:34px;
+font-size:18px;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+padding:90px 40px;
+border-radius:30px;
+text-align:center;
+color:white;
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:850px;
+margin:auto;
+line-height:32px;
+font-size:18px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#081b29;
+color:white;
+padding:30px 8%;
+text-align:center;
+margin-top:80px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:46px;
+line-height:58px;
+}
+
+nav ul{
+display:none;
+}
+
+.hero{
+padding:0 5%;
+}
+
+section{
+padding:80px 5%;
+}
+
+.process{
+padding:40px 20px;
+}
+
+.highlight{
+padding:40px 20px;
+}
+
+.highlight h2{
+font-size:36px;
+}
+
+.cta h2{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Vaishali <span>Electricals</span>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#documents">Documents</a></li>
+<li><a href="#departments">Departments</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Government <span>Approval</span><br>Services For Solar Projects</h1>
+
+<p>
+Complete support for solar approvals including net metering, DISCOM approval, subsidy processing, CEIG approval, and electrical safety compliance for residential, commercial, and industrial projects.
+</p>
+
+<a href="#services" class="hero-btn">Explore Services</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>What Are Government Approval Services?</h2>
+<p>Essential approvals and documentation required for legal solar installation.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Net Metering Approval</h3>
+<p>
+Approval process for exporting extra solar electricity to the electricity grid through net metering connection.
+</p>
+</div>
+
+<div class="card">
+<h3>DISCOM Permission</h3>
+<p>
+Technical approval from electricity distribution company before grid synchronization.
+</p>
+</div>
+
+<div class="card">
+<h3>Subsidy Assistance</h3>
+<p>
+Complete support for government rooftop solar subsidy applications and processing.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+<h2>Main Approval Services</h2>
+<p>Professional solar approval support for smooth project execution.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Net Metering Services</h3>
+<p>
+Application submission, document preparation, inspection coordination, and net meter installation support.
+</p>
+</div>
+
+<div class="card">
+<h3>DISCOM Approval</h3>
+<p>
+Technical feasibility approval, load verification, and grid connectivity support.
+</p>
+</div>
+
+<div class="card">
+<h3>CEIG Approval</h3>
+<p>
+Electrical safety inspection and compliance certification for industrial solar systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Electrical Inspector Approval</h3>
+<p>
+Approval for safety compliance, earthing verification, and high-capacity installations.
+</p>
+</div>
+
+<div class="card">
+<h3>Subsidy Processing</h3>
+<p>
+MNRE subsidy registration, document upload, and subsidy claim assistance.
+</p>
+</div>
+
+<div class="card">
+<h3>Documentation Support</h3>
+<p>
+Preparation of SLD drawings, technical reports, equipment certificates, and applications.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="process">
+
+<div class="section-title">
+<h2 style="color:white;">Government Approval Process</h2>
+<p style="color:#ddd;">Simple and systematic solar approval workflow.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<h3>Site Survey</h3>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>System Design</h3>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>Application Submission</h3>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Government Inspection</h3>
+</div>
+
+<div class="step">
+<span>5</span>
+<h3>Approval & Commissioning</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOCUMENTS -->
+
+<section id="documents">
+
+<div class="section-title">
+<h2>Required Documents</h2>
+<p>Common documents required for solar project approvals.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Personal Documents</h3>
+<p>
+Electricity bill, Aadhaar card, PAN card, property documents, and passport size photographs.
+</p>
+</div>
+
+<div class="card">
+<h3>Technical Documents</h3>
+<p>
+Single Line Diagram (SLD), plant layout, inverter certificates, and equipment datasheets.
+</p>
+</div>
+
+<div class="card">
+<h3>Compliance Reports</h3>
+<p>
+Electrical test reports, safety certificates, and load sanction details.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- DEPARTMENTS -->
+
+<section id="departments">
+
+<div class="section-title">
+<h2>Government Departments Involved</h2>
+<p>Major authorities involved in solar project approvals.</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Department</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>DISCOM</td>
+<td>Grid connection approval</td>
+</tr>
+
+<tr>
+<td>Electrical Inspector</td>
+<td>Safety verification</td>
+</tr>
+
+<tr>
+<td>CEIG</td>
+<td>Industrial project approval</td>
+</tr>
+
+<tr>
+<td>MNRE</td>
+<td>Solar subsidy schemes</td>
+</tr>
+
+<tr>
+<td>Local Authorities</td>
+<td>Additional permissions if required</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- HIGHLIGHT -->
+
+<section>
+
+<div class="highlight">
+
+<h2>Why Professional Approval Services Matter</h2>
+
+<p>
+Professional approval services help avoid delays, documentation errors, and technical objections while ensuring legal compliance, faster net metering activation, and smooth subsidy processing for solar projects.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section id="contact">
+
+<div class="cta">
+
+<h2>Get Hassle-Free Solar Approvals</h2>
+
+<p>
+Complete support for net metering, DISCOM approvals, subsidy processing, CEIG certification, and government documentation for your solar project.
+</p>
+
+<a href="aboutus.html" class="hero-btn">Get Free Consultation</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Solar Government Approval Services | Professional Solar Solutions
+</p>
+
+</footer>
+
+<!-- JS -->
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav = document.querySelector("nav");
+
+if(window.scrollY > 50){
+nav.style.background = "#081b29";
+}
+else{
+nav.style.background = "rgba(0,0,0,0.55)";
+}
+
+});
+
+</script>
+
+</body>
+</html>

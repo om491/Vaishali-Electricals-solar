@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Off-Grid Solar System</title>
+<link rel="icon" href="images/logo.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f8fb;
+overflow-x:hidden;
+color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#00d084;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00d084;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-content h1{
+font-size:68px;
+line-height:82px;
+margin-bottom:25px;
+}
+
+.hero-content h1 span{
+color:#00d084;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:34px;
+margin-bottom:40px;
+color:#ddd;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 40px;
+background:#00d084;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,208,132,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-6px);
+background:#00b86b;
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#081b29;
+margin-bottom:15px;
+}
+
+.section-title p{
+font-size:17px;
+color:#666;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#00d084,#0099ff);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#081b29;
+}
+
+.card p{
+line-height:28px;
+color:#555;
+}
+
+/* WORKING */
+
+.working{
+background:linear-gradient(135deg,#081b29,#102b44);
+border-radius:30px;
+padding:70px;
+color:white;
+margin-top:50px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.step{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+backdrop-filter:blur(8px);
+transition:0.4s;
+}
+
+.step:hover{
+background:#00d084;
+transform:translateY(-8px);
+}
+
+.step span{
+display:inline-block;
+width:60px;
+height:60px;
+line-height:60px;
+background:white;
+color:#081b29;
+border-radius:50%;
+font-size:24px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+/* ADVANTAGES */
+
+.advantages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.adv-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.adv-card:hover{
+background:#00d084;
+color:white;
+transform:translateY(-10px);
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+margin-top:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+table th{
+background:#00d084;
+color:white;
+padding:18px;
+font-size:17px;
+}
+
+table td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+table tr:hover{
+background:#f1fff9;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+padding:90px 40px;
+border-radius:30px;
+text-align:center;
+color:white;
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:800px;
+margin:auto;
+line-height:32px;
+font-size:18px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#081b29;
+color:white;
+padding:30px 8%;
+text-align:center;
+margin-top:80px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:46px;
+line-height:58px;
+}
+
+nav ul{
+display:none;
+}
+
+.hero{
+padding:0 5%;
+}
+
+section{
+padding:80px 5%;
+}
+
+.working{
+padding:40px 20px;
+}
+
+.cta h2{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Vaishali <b>  </b><span>Electricals</span></div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#working">Working</a></li>
+<li><a href="#advantages">Advantages</a></li>
+<li><a href="#sizes">System Sizes</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Reliable <span>Off-Grid</span><br>Solar System</h1>
+
+<p>
+An Off-Grid Solar System works independently without electricity grid support. It stores solar energy in batteries and provides uninterrupted backup power for homes, farms, shops, and remote locations.
+</p>
+
+<a href="#about" class="hero-btn">Explore More</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>What is Off-Grid Solar?</h2>
+<p>Complete solar power solution with battery backup.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Independent System</h3>
+<p>
+Off-grid solar systems work completely without government electricity supply and are ideal for remote areas.
+</p>
+</div>
+
+<div class="card">
+<h3>Battery Backup</h3>
+<p>
+Electricity generated during daytime is stored in batteries for night-time and power-cut usage.
+</p>
+</div>
+
+<div class="card">
+<h3>Reliable Power</h3>
+<p>
+Provides continuous electricity backup for homes, offices, farms, telecom towers, and industries.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COMPONENTS -->
+
+<section id="components">
+
+<div class="section-title">
+<h2>Main Components</h2>
+<p>Important equipment used in off-grid solar systems.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Solar Panels</h3>
+<p>
+Convert sunlight into DC electricity using Mono PERC or Polycrystalline technology.
+</p>
+</div>
+
+<div class="card">
+<h3>Charge Controller</h3>
+<p>
+Controls battery charging and protects batteries from overcharging and voltage fluctuation.
+</p>
+</div>
+
+<div class="card">
+<h3>Battery Bank</h3>
+<p>
+Stores excess electricity for backup use during night and cloudy weather.
+</p>
+</div>
+
+<div class="card">
+<h3>Solar Inverter</h3>
+<p>
+Converts DC power into AC electricity for home and commercial appliances.
+</p>
+</div>
+
+<div class="card">
+<h3>Protection System</h3>
+<p>
+Includes ACDB, DCDB, earthing, and safety devices for system protection.
+</p>
+</div>
+
+<div class="card">
+<h3>Mounting Structure</h3>
+<p>
+Strong galvanized structure to hold solar panels securely for long life.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WORKING -->
+
+<section id="working">
+
+<div class="working">
+
+<div class="section-title">
+<h2 style="color:white;">Working Principle</h2>
+<p style="color:#ddd;">Simple and efficient solar energy flow.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<h3>Solar Panels Generate Power</h3>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>Charge Controller Regulates Current</h3>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>Batteries Store Energy</h3>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Inverter Converts DC to AC</h3>
+</div>
+
+<div class="step">
+<span>5</span>
+<h3>Appliances Use Electricity</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADVANTAGES -->
+
+<section id="advantages">
+
+<div class="section-title">
+<h2>Advantages & Benefits</h2>
+<p>Why off-grid solar systems are important in remote locations.</p>
+</div>
+
+<div class="advantages">
+
+<div class="adv-card">
+<h3>No Grid Dependency</h3>
+<p>Works completely without government electricity supply.</p>
+</div>
+
+<div class="adv-card">
+<h3>Power Backup</h3>
+<p>Provides electricity during power cuts and outages.</p>
+</div>
+
+<div class="adv-card">
+<h3>Ideal For Rural Areas</h3>
+<p>Best solution for villages, farms, and remote locations.</p>
+</div>
+
+<div class="adv-card">
+<h3>Eco Friendly</h3>
+<p>Generates clean renewable energy with low pollution.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TABLE -->
+
+<section id="sizes">
+
+<div class="section-title">
+<h2>Typical Off-Grid System Sizes</h2>
+<p>Select suitable capacity according to your requirement.</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>System Size</th>
+<th>Suitable For</th>
+</tr>
+
+<tr>
+<td>1 kW</td>
+<td>Small Home</td>
+</tr>
+
+<tr>
+<td>3 kW</td>
+<td>Medium House</td>
+</tr>
+
+<tr>
+<td>5 kW</td>
+<td>Large Home / Shop</td>
+</tr>
+
+<tr>
+<td>10 kW+</td>
+<td>Commercial & Industrial</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- COMPARISON -->
+
+<section>
+
+<div class="section-title">
+<h2>On-Grid vs Off-Grid</h2>
+<p>Comparison between solar system types.</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>On-Grid</th>
+<th>Off-Grid</th>
+</tr>
+
+<tr>
+<td>Grid Connection</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Battery Required</td>
+<td>Optional</td>
+<td>Mandatory</td>
+</tr>
+
+<tr>
+<td>Power Backup</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Initial Cost</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+
+<tr>
+<td>Suitable Area</td>
+<td>Cities</td>
+<td>Remote Areas</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section id="contact">
+
+<div class="cta">
+
+<h2>Start Your Solar Journey Today</h2>
+
+<p>
+Get a reliable off-grid solar solution with powerful battery backup and uninterrupted renewable energy for your home, farm, or business.
+</p>
+
+<a href="aboutus.html" class="hero-btn">Get Free Consultation</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+� 2026 OffGrid Solar Energy Solutions | Designed for Professional Solar Business Website
+</p>
+
+</footer>
+
+<!-- JS -->
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav = document.querySelector("nav");
+
+if(window.scrollY > 50){
+nav.style.background = "#081b29";
+}
+else{
+nav.style.background = "rgba(0,0,0,0.5)";
+}
+
+});
+
+</script>
+
+</body>
+</html>

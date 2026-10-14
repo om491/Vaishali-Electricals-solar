@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hybrid Solar System</title>
+<link rel="icon" href="images/logo.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f8fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(10px);
+z-index:1000;
+transition:0.4s;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#00d084;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+font-size:15px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00d084;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:720px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-content h1{
+font-size:70px;
+line-height:84px;
+margin-bottom:25px;
+}
+
+.hero-content h1 span{
+color:#00d084;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:34px;
+margin-bottom:40px;
+color:#ddd;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 40px;
+background:#00d084;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,208,132,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-6px);
+background:#00b86b;
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+margin-bottom:15px;
+color:#081b29;
+}
+
+.section-title p{
+font-size:17px;
+color:#666;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#00d084,#0099ff);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#081b29;
+}
+
+.card p{
+line-height:28px;
+color:#555;
+}
+
+/* WORKING */
+
+.working{
+background:linear-gradient(135deg,#081b29,#102b44);
+padding:70px;
+border-radius:30px;
+color:white;
+margin-top:50px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.step{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+backdrop-filter:blur(8px);
+transition:0.4s;
+}
+
+.step:hover{
+background:#00d084;
+transform:translateY(-8px);
+}
+
+.step span{
+display:inline-block;
+width:60px;
+height:60px;
+line-height:60px;
+background:white;
+color:#081b29;
+border-radius:50%;
+font-size:24px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+/* ADVANTAGES */
+
+.advantages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.adv-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.adv-card:hover{
+background:#00d084;
+color:white;
+transform:translateY(-10px);
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+margin-top:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+table th{
+background:#00d084;
+color:white;
+padding:18px;
+font-size:17px;
+}
+
+table td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+table tr:hover{
+background:#f1fff9;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+padding:90px 40px;
+border-radius:30px;
+text-align:center;
+color:white;
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:850px;
+margin:auto;
+line-height:32px;
+font-size:18px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#081b29;
+color:white;
+padding:30px 8%;
+text-align:center;
+margin-top:80px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:48px;
+line-height:60px;
+}
+
+nav ul{
+display:none;
+}
+
+.hero{
+padding:0 5%;
+}
+
+section{
+padding:80px 5%;
+}
+
+.working{
+padding:40px 20px;
+}
+
+.cta h2{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Hybrid<span>Solar</span></div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#working">Working</a></li>
+<li><a href="#advantages">Advantages</a></li>
+<li><a href="#cost">Cost</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Advanced <span>Hybrid</span><br>Solar System</h1>
+
+<p>
+A Hybrid Solar System combines On-Grid and Off-Grid technology with solar panels, battery backup, and grid support to provide uninterrupted and intelligent power management.
+</p>
+
+<a href="#about" class="hero-btn">Explore System</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>What is Hybrid Solar?</h2>
+<p>Smart combination of solar, battery, and electricity grid.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Grid + Battery System</h3>
+<p>
+Hybrid solar systems work with both battery backup and utility grid connection for maximum reliability.
+</p>
+</div>
+
+<div class="card">
+<h3>Power Backup</h3>
+<p>
+Provides electricity during power cuts using stored solar battery energy.
+</p>
+</div>
+
+<div class="card">
+<h3>Smart Energy Control</h3>
+<p>
+Automatically switches between solar, battery, and grid according to power availability.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COMPONENTS -->
+
+<section id="components">
+
+<div class="section-title">
+<h2>Main Components</h2>
+<p>Important equipment used in hybrid solar systems.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Solar Panels</h3>
+<p>
+Mono PERC, TOPCon, and Bifacial panels convert sunlight into electricity efficiently.
+</p>
+</div>
+
+<div class="card">
+<h3>Hybrid Inverter</h3>
+<p>
+Controls solar generation, battery charging, grid synchronization, and backup switching.
+</p>
+</div>
+
+<div class="card">
+<h3>Battery Storage</h3>
+<p>
+Stores extra solar energy for night-time and power-cut operation.
+</p>
+</div>
+
+<div class="card">
+<h3>Net Meter</h3>
+<p>
+Measures electricity import and export between system and utility grid.
+</p>
+</div>
+
+<div class="card">
+<h3>Protection Devices</h3>
+<p>
+Includes ACDB, DCDB, SPD, MCB, and earthing systems for safety.
+</p>
+</div>
+
+<div class="card">
+<h3>DG Generator Support</h3>
+<p>
+Optional generator support available for industrial and critical applications.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WORKING -->
+
+<section id="working">
+
+<div class="working">
+
+<div class="section-title">
+<h2 style="color:white;">How Hybrid Solar Works</h2>
+<p style="color:#ddd;">Efficient automatic power management system.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<h3>Solar Generates Electricity</h3>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>Loads Run on Solar Power</h3>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>Extra Energy Charges Battery</h3>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Grid Exports Excess Power</h3>
+</div>
+
+<div class="step">
+<span>5</span>
+<h3>Battery Supports During Outage</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADVANTAGES -->
+
+<section id="advantages">
+
+<div class="section-title">
+<h2>Advantages of Hybrid Solar</h2>
+<p>Reliable solar solution with smart backup functionality.</p>
+</div>
+
+<div class="advantages">
+
+<div class="adv-card">
+<h3>Power Backup</h3>
+<p>Continuous electricity during power failures and outages.</p>
+</div>
+
+<div class="adv-card">
+<h3>Lower Bills</h3>
+<p>Reduces dependency on expensive grid electricity.</p>
+</div>
+
+<div class="adv-card">
+<h3>Battery Storage</h3>
+<p>Stores excess solar power for night and emergency use.</p>
+</div>
+
+<div class="adv-card">
+<h3>Energy Independence</h3>
+<p>Less dependence on electricity board and diesel generators.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COST TABLE -->
+
+<section id="cost">
+
+<div class="section-title">
+<h2>Approximate Hybrid Solar Cost</h2>
+<p>Estimated hybrid solar system prices in India (2026).</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>System Size</th>
+<th>Approximate Cost</th>
+</tr>
+
+<tr>
+<td>3kW Hybrid</td>
+<td>₹3.5 – ₹5 Lakhs</td>
+</tr>
+
+<tr>
+<td>5kW Hybrid</td>
+<td>₹5 – ₹7 Lakhs</td>
+</tr>
+
+<tr>
+<td>10kW Hybrid</td>
+<td>₹9 – ₹14 Lakhs</td>
+</tr>
+
+<tr>
+<td>20kW Hybrid</td>
+<td>₹18 – ₹28 Lakhs</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- COMPARISON -->
+
+<section>
+
+<div class="section-title">
+<h2>Solar System Comparison</h2>
+<p>Difference between On-Grid, Off-Grid, and Hybrid systems.</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>On-Grid</th>
+<th>Off-Grid</th>
+<th>Hybrid</th>
+</tr>
+
+<tr>
+<td>Battery</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Grid Connection</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Backup During Power Cut</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Net Metering</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Cost</td>
+<td>Low</td>
+<td>High</td>
+<td>Medium-High</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- APPLICATIONS -->
+
+<section>
+
+<div class="section-title">
+<h2>Applications of Hybrid Solar</h2>
+<p>Perfect solution for uninterrupted power applications.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Residential Homes</h3>
+<p>Reliable backup and electricity bill savings for homes and villas.</p>
+</div>
+
+<div class="card">
+<h3>Commercial Buildings</h3>
+<p>Suitable for offices, hotels, hospitals, and schools.</p>
+</div>
+
+<div class="card">
+<h3>Industrial Plants</h3>
+<p>Reduces diesel usage and provides stable power for factories.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section id="contact">
+
+<div class="cta">
+
+<h2>Upgrade To Smart Hybrid Solar</h2>
+
+<p>
+Get uninterrupted power backup, lower electricity bills, and intelligent energy management with modern hybrid solar technology.
+</p>
+
+<a href="aboutus.html" class="hero-btn">Get Free Consultation</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Hybrid Solar Energy Solutions | Designed for Professional Solar Business Website
+</p>
+
+</footer>
+
+<!-- JS -->
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const nav = document.querySelector("nav");
+
+if(window.scrollY > 50){
+nav.style.background = "#081b29";
+}
+else{
+nav.style.background = "rgba(0,0,0,0.55)";
+}
+
+});
+
+</script>
+
+</body>
+</html>

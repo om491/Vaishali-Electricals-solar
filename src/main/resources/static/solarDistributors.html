@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Explore solar products and electrical materials from Vaishali Electricals for residential, commercial, industrial and project requirements in Pune.">
+    <meta property="og:title" content="Solar Products & Materials | Vaishali Electricals">
+    <meta property="og:description"
+        content="Solar modules, inverters, mounting, cables, protection, earthing and installation materials for project requirements.">
+    <meta property="og:image" content="images/solar1-3.jpeg">
+    <title>Solar Products & Materials | Vaishali Electricals</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0B1F3A;
+            --navy2: #102B4F;
+            --gold: #F5B700;
+            --green: #159957;
+            --paper: #F7F9FC;
+            --text: #26364A;
+            --muted: #68768A;
+            --line: #E5EBF2;
+            --shadow: 0 18px 45px rgba(11, 31, 58, .09)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        strong,
+        .sd-brand {
+            font-family: 'Manrope', sans-serif
+        }
+
+        a {
+            text-decoration: none;
+            transition: .3s ease
+        }
+
+        button,
+        input {
+            font: inherit
+        }
+
+        .sd-navbar {
+            background: rgba(11, 31, 58, .97);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .12);
+            padding: 10px 0;
+            transition: .3s
+        }
+
+        .sd-navbar.is-compact {
+            padding: 4px 0
+        }
+
+        .sd-brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: #fff;
+            font-weight: 800
+        }
+
+        .sd-brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 10px;
+            padding: 4px
+        }
+
+        .sd-brand small {
+            display: block;
+            color: #fbd35a;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            margin-top: 2px
+        }
+
+        .sd-navbar .nav-link {
+            color: #dfe8f1;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 5px
+        }
+
+        .sd-navbar .nav-link:hover,
+        .sd-navbar .nav-link.active {
+            color: #fbd35a
+        }
+
+        .sd-nav-cta,
+        .sd-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            font-weight: 800;
+            border-radius: 5px
+        }
+
+        .sd-nav-cta {
+            background: var(--gold);
+            color: var(--navy) !important;
+            padding: 11px 17px !important
+        }
+
+        .sd-nav-cta:hover {
+            background: #fff;
+            transform: translateY(-2px)
+        }
+
+        .sd-hero {
+            position: relative;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(90deg, rgba(7, 28, 53, .95), rgba(7, 28, 53, .7)), url('images/solar1-3.jpeg') center/cover
+        }
+
+        .sd-hero:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: .13;
+            background-image: linear-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .18) 1px, transparent 1px);
+            background-size: 72px 72px;
+            mask-image: linear-gradient(90deg, #000, transparent 75%)
+        }
+
+        .sd-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px
+        }
+
+        .sd-eyebrow {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px
+        }
+
+        .sd-hero .sd-eyebrow {
+            color: #fbd35a
+        }
+
+        .sd-hero h1 {
+            color: #fff;
+            font-size: clamp(42px, 5.6vw, 72px);
+            line-height: 1.04;
+            margin: 16px 0 22px;
+            letter-spacing: -1px
+        }
+
+        .sd-hero h1 span {
+            color: #fbd35a
+        }
+
+        .sd-hero p {
+            max-width: 650px;
+            color: #d5e0e8;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px
+        }
+
+        .sd-btn {
+            padding: 14px 20px
+        }
+
+        .sd-btn-gold {
+            background: var(--gold);
+            color: var(--navy)
+        }
+
+        .sd-btn-gold:hover {
+            background: #fff;
+            color: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .18)
+        }
+
+        .sd-btn-outline {
+            border: 1px solid rgba(255, 255, 255, .55);
+            color: #fff
+        }
+
+        .sd-btn-outline:hover {
+            background: #fff;
+            color: var(--navy);
+            transform: translateY(-3px)
+        }
+
+        .sd-hero-visual {
+            position: relative;
+            z-index: 1;
+            margin-left: auto;
+            max-width: 410px
+        }
+
+        .sd-hero-visual img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border: 8px solid rgba(255, 255, 255, .13);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .28)
+        }
+
+        .sd-glass-card {
+            position: absolute;
+            left: -35px;
+            bottom: -25px;
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, .14);
+            border: 1px solid rgba(255, 255, 255, .3);
+            backdrop-filter: blur(14px);
+            color: #fff;
+            min-width: 210px
+        }
+
+        .sd-glass-card i {
+            color: var(--gold);
+            font-size: 22px;
+            margin-bottom: 8px
+        }
+
+        .sd-glass-card strong,
+        .sd-glass-card span {
+            display: block
+        }
+
+        .sd-glass-card strong {
+            font-size: 14px
+        }
+
+        .sd-glass-card span {
+            font-size: 12px;
+            color: #d4e1e8;
+            margin-top: 3px
+        }
+
+        .sd-trust {
+            position: relative;
+            z-index: 2;
+            margin-top: -46px
+        }
+
+        .sd-trust-box {
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            padding: 22px
+        }
+
+        .sd-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 20px;
+            border-right: 1px solid var(--line)
+        }
+
+        .sd-trust-item:last-child {
+            border: 0
+        }
+
+        .sd-trust-item i {
+            color: var(--green);
+            font-size: 22px
+        }
+
+        .sd-trust-item strong,
+        .sd-trust-item span {
+            display: block
+        }
+
+        .sd-trust-item strong {
+            font-size: 14px
+        }
+
+        .sd-trust-item span {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 2px
+        }
+
+        .sd-section {
+            padding: 92px 0
+        }
+
+        .sd-section-light {
+            background: var(--paper)
+        }
+
+        .sd-heading {
+            text-align: center;
+            max-width: 740px;
+            margin: 0 auto 46px
+        }
+
+        .sd-heading h2 {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 46px);
+            margin: 12px 0 18px
+        }
+
+        .sd-heading h2:after {
+            content: '';
+            display: block;
+            width: 58px;
+            height: 3px;
+            margin: 17px auto 0;
+            background: var(--gold)
+        }
+
+        .sd-heading p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin: 0
+        }
+
+        .sd-catalog-tools {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 28px
+        }
+
+        .sd-search {
+            position: relative;
+            max-width: 360px;
+            width: 100%
+        }
+
+        .sd-search i {
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            color: var(--muted)
+        }
+
+        .sd-search input {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            padding: 12px 15px 12px 42px;
+            outline: 0
+        }
+
+        .sd-search input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(245, 183, 0, .14)
+        }
+
+        .sd-filter-wrap {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 4px
+        }
+
+        .sd-filter-wrap::-webkit-scrollbar {
+            display: none
+        }
+
+        .sd-filter {
+            white-space: nowrap;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: #fff;
+            color: var(--muted);
+            padding: 9px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .sd-filter:hover,
+        .sd-filter.active {
+            background: var(--navy);
+            border-color: var(--navy);
+            color: #fff
+        }
+
+        .sd-product-card {
+            height: 100%;
+            min-height: 295px;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 25px 23px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
+            transition: .35s ease
+        }
+
+        .sd-product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold);
+            transition: width .4s ease
+        }
+
+        .sd-product-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 183, 0, .65);
+            box-shadow: 0 18px 38px rgba(15, 23, 42, .11)
+        }
+
+        .sd-product-card:hover:before {
+            width: 100%
+        }
+
+        .sd-number {
+            color: #a3afbd;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px
+        }
+
+        .sd-product-icon {
+            display: grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            margin: 17px 0 19px;
+            border-radius: 14px;
+            background: #f0f7f4;
+            color: var(--green);
+            font-size: 22px;
+            transition: .35s
+        }
+
+        .sd-product-card:hover .sd-product-icon {
+            transform: scale(1.04);
+            background: #fff7dc;
+            color: var(--navy)
+        }
+
+        .sd-product-card h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin: 0 0 10px
+        }
+
+        .sd-spec-label {
+            display: block;
+            color: #9b7615;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px
+        }
+
+        .sd-product-card p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65;
+            margin: 0 0 17px
+        }
+
+        .sd-enquire {
+            position: absolute;
+            bottom: 23px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--navy);
+            font-size: 13px;
+            font-weight: 800
+        }
+
+        .sd-enquire i {
+            color: var(--gold);
+            transition: .3s
+        }
+
+        .sd-enquire:hover {
+            color: var(--green)
+        }
+
+        .sd-enquire:hover i {
+            transform: translateX(5px)
+        }
+
+        .sd-no-results {
+            display: none;
+            text-align: center;
+            color: var(--muted);
+            padding: 25px
+        }
+
+        .sd-no-results.show {
+            display: block
+        }
+
+        .sd-feature {
+            background: #fff
+        }
+
+        .sd-feature-image {
+            height: 470px;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 18px 18px 0 var(--gold)
+        }
+
+        .sd-feature h2 {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 46px);
+            margin: 12px 0 18px
+        }
+
+        .sd-feature p {
+            color: var(--muted);
+            line-height: 1.8
+        }
+
+        .sd-feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .sd-feature-list li {
+            font-size: 14px;
+            color: var(--text)
+        }
+
+        .sd-feature-list i {
+            color: var(--green);
+            margin-right: 8px
+        }
+
+        .sd-why {
+            background: var(--paper)
+        }
+
+        .sd-why-card {
+            text-align: center;
+            height: 100%;
+            padding: 24px 17px
+        }
+
+        .sd-why-card i {
+            display: grid;
+            place-items: center;
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #fff5d5;
+            color: var(--green);
+            font-size: 23px
+        }
+
+        .sd-why-card h3 {
+            color: var(--navy);
+            font-size: 17px
+        }
+
+        .sd-why-card p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65
+        }
+
+        .sd-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            position: relative;
+            gap: 25px
+        }
+
+        .sd-steps:before {
+            content: '';
+            position: absolute;
+            left: 16%;
+            right: 16%;
+            top: 28px;
+            border-top: 1px dashed #c7d1dc
+        }
+
+        .sd-step {
+            position: relative;
+            z-index: 1;
+            text-align: center
+        }
+
+        .sd-step b {
+            display: grid;
+            place-items: center;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            font-family: 'Manrope', sans-serif
+        }
+
+        .sd-step h3 {
+            font-size: 18px;
+            color: var(--navy)
+        }
+
+        .sd-step p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6
+        }
+
+        .sd-cta {
+            background: linear-gradient(120deg, var(--navy), var(--navy2));
+            padding: 75px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .sd-cta:after {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            top: -190px;
+            border-radius: 50%;
+            background: rgba(245, 183, 0, .1);
+            filter: blur(18px)
+        }
+
+        .sd-cta h2,
+        .sd-cta p,
+        .sd-cta .sd-cta-actions {
+            position: relative;
+            z-index: 1
+        }
+
+        .sd-cta h2 {
+            font-size: clamp(30px, 4vw, 48px)
+        }
+
+        .sd-cta p {
+            max-width: 650px;
+            margin: 14px auto 26px;
+            color: #d1dce5;
+            line-height: 1.7
+        }
+
+        .sd-cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .sd-contact {
+            background: var(--paper)
+        }
+
+        .sd-contact-card {
+            height: 100%;
+            padding: 27px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, .05)
+        }
+
+        .sd-contact-card h3 {
+            color: var(--navy);
+            font-size: 20px
+        }
+
+        .sd-contact-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        .sd-contact-line {
+            display: flex;
+            gap: 11px;
+            color: var(--text);
+            font-size: 14px;
+            margin: 13px 0
+        }
+
+        .sd-contact-line i {
+            color: var(--green);
+            width: 18px;
+            margin-top: 3px
+        }
+
+        .sd-footer {
+            background: #07182d;
+            color: #b9c7d2;
+            padding: 62px 0 20px
+        }
+
+        .sd-footer h3,
+        .sd-footer h5 {
+            color: #fff
+        }
+
+        .sd-footer h3 {
+            font-size: 20px
+        }
+
+        .sd-footer h5 {
+            font-size: 14px;
+            margin-bottom: 18px
+        }
+
+        .sd-footer p,
+        .sd-footer a {
+            font-size: 13px;
+            line-height: 1.7
+        }
+
+        .sd-footer a {
+            display: block;
+            color: #b9c7d2;
+            margin: 8px 0
+        }
+
+        .sd-footer a:hover {
+            color: #fbd35a;
+            transform: translateX(3px)
+        }
+
+        .sd-footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            margin-top: 35px;
+            padding-top: 18px;
+            text-align: center;
+            font-size: 12px
+        }
+
+        .sd-reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .sd-reveal.visible {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:991px) {
+            .sd-hero-visual {
+                max-width: 330px;
+                margin: 45px auto 0
+            }
+
+            .sd-hero {
+                padding: 80px 0
+            }
+
+            .sd-catalog-tools {
+                display: block
+            }
+
+            .sd-search {
+                max-width: none;
+                margin-bottom: 18px
+            }
+
+            .sd-trust-item {
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                justify-content: flex-start
+            }
+
+            .sd-trust-item:last-child {
+                border-bottom: 0
+            }
+
+            .sd-feature-image {
+                height: 380px
+            }
+
+            .sd-steps:before {
+                left: 10%;
+                right: 10%
+            }
+        }
+
+        @media(max-width:767px) {
+            .sd-hero {
+                min-height: 700px;
+                padding: 72px 0 100px
+            }
+
+            .sd-hero p {
+                font-size: 16px
+            }
+
+            .sd-hero-buttons {
+                flex-direction: column;
+                align-items: stretch
+            }
+
+            .sd-btn {
+                width: 100%
+            }
+
+            .sd-glass-card {
+                left: 15px
+            }
+
+            .sd-trust {
+                margin-top: -35px
+            }
+
+            .sd-section {
+                padding: 68px 0
+            }
+
+            .sd-feature-image {
+                height: 280px
+            }
+
+            .sd-feature-list {
+                grid-template-columns: 1fr
+            }
+
+            .sd-steps {
+                grid-template-columns: 1fr;
+                gap: 12px
+            }
+
+            .sd-steps:before {
+                display: none
+            }
+
+            .sd-step {
+                display: grid;
+                grid-template-columns: 56px 1fr;
+                column-gap: 15px;
+                text-align: left;
+                align-items: center
+            }
+
+            .sd-step b {
+                grid-row: span 2;
+                margin: 0
+            }
+
+            .sd-step h3 {
+                margin: 0
+            }
+
+            .sd-step p {
+                margin: 5px 0
+            }
+
+            .sd-footer {
+                padding: 52px 15px 20px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .sd-reveal {
+                opacity: 1;
+                transform: none;
+                transition: none
+            }
+
+            .sd-product-card,
+            .sd-product-icon,
+            .sd-btn {
+                transition: none
+            }
+        }
+        /* Project command center */
+        .project-command-center{position:relative;overflow:hidden;padding:105px 0 92px;background:#F7F9FC}.project-command-center:before{content:'';position:absolute;inset:0;opacity:.2;background-image:linear-gradient(rgba(11,31,58,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(11,31,58,.13) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent)}.command-heading{position:relative;z-index:1;max-width:720px;text-align:center;margin:0 auto 52px}.command-heading .sd-eyebrow{display:inline-flex;align-items:center;gap:8px;color:#a27610}.command-heading .sd-eyebrow i{display:inline-block;width:23px;height:2px;background:var(--gold)}.command-heading h2{color:var(--navy);font-size:clamp(34px,4.3vw,54px);line-height:1.08;margin:14px 0 17px}.command-heading h2:after{content:'';display:block;width:56px;height:3px;margin:17px auto 0;background:var(--gold)}.command-heading p{color:var(--muted);font-size:15px;line-height:1.7;margin:0}.command-map{position:relative;min-height:500px;max-width:1100px;margin:0 auto}.command-map:before{content:'';position:absolute;left:50%;top:50%;width:455px;height:455px;border:1px solid rgba(21,153,87,.1);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}.command-wire{position:absolute;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform-origin:left;opacity:.8;animation:commandLine 1.2s ease forwards}.wire-one{width:285px;left:21%;top:34%;transform:rotate(19deg)}.wire-two{width:285px;right:21%;top:34%;transform:rotate(161deg)}.wire-three{width:285px;left:21%;bottom:31%;transform:rotate(-19deg)}.wire-four{width:285px;right:21%;bottom:31%;transform:rotate(-161deg)}.command-wire:after{content:'';position:absolute;right:0;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(245,183,0,.1)}.project-core{position:absolute;left:50%;top:50%;width:200px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:translate(-50%,-50%);border:1px solid rgba(245,183,0,.7);border-radius:50%;background:#fff;box-shadow:0 18px 45px rgba(11,31,58,.11);z-index:2}.project-core:before{content:'';position:absolute;inset:19px;border:1px dashed rgba(21,153,87,.35);border-radius:50%}.project-core>i{position:relative;color:var(--gold);font-size:24px;margin-bottom:8px}.project-core strong,.project-core small{position:relative}.project-core strong{color:var(--navy);font:800 16px/1.15 'Manrope',sans-serif}.project-core small{color:var(--green);font-size:10px;line-height:1.4;margin-top:8px}.core-ring{position:absolute;border:1px solid rgba(11,31,58,.13);border-radius:50%;pointer-events:none}.ring-one{inset:-15px}.ring-two{inset:-31px;border-style:dashed;animation:slowOrbit 25s linear infinite}.project-zone{position:absolute;width:235px;min-height:174px;padding:22px 20px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 32px rgba(11,31,58,.07);z-index:3;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease}.project-zone:after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s ease}.project-zone:hover{transform:translateY(-6px);border-color:rgba(245,183,0,.65);box-shadow:0 20px 40px rgba(11,31,58,.12)}.project-zone:hover:after{width:100%}.zone-generation{left:4%;top:10%;border-radius:52px 14px 14px 14px}.zone-structure{right:4%;top:10%;border-radius:14px 52px 14px 14px}.zone-protection{left:4%;bottom:7%;border-radius:14px 14px 14px 52px}.zone-monitoring{right:4%;bottom:7%;border-radius:14px 14px 52px 14px}.zone-number{position:absolute;top:13px;right:17px;color:#a9b4c0;font:800 12px 'Manrope',sans-serif;transition:color .3s}.project-zone:hover .zone-number{color:#a27610}.project-zone>i{display:block;color:var(--green);font-size:22px;margin-bottom:12px;transition:transform .4s,color .4s}.project-zone:hover>i{transform:scale(1.05);color:#a27610}.project-zone h3{color:var(--navy);font-size:17px;text-transform:uppercase;margin:0 0 10px}.project-zone ul{list-style:none;padding:0;margin:0 0 10px}.project-zone li{color:var(--text);font-size:12px;line-height:1.65}.project-zone li:before{content:'+';color:var(--gold);font-weight:800;margin-right:6px}.project-zone small{display:block;color:var(--muted);font-size:10px;border-top:1px solid var(--line);padding-top:8px}.ecosystem-flow{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);max-width:920px;margin:0 auto 50px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.ecosystem-flow>div{position:relative;padding:0 14px;border-right:1px solid var(--line)}.ecosystem-flow>div:last-child{border:0}.ecosystem-flow b,.ecosystem-flow strong,.ecosystem-flow span{display:block}.ecosystem-flow b{color:var(--gold);font:800 11px 'Manrope',sans-serif}.ecosystem-flow strong{color:var(--navy);font-size:11px;letter-spacing:1px;margin:6px 0}.ecosystem-flow span{color:var(--muted);font-size:11px;line-height:1.4}.command-cta{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 34px;background:var(--navy);border-radius:24px;color:#fff;overflow:hidden;box-shadow:0 18px 40px rgba(11,31,58,.15)}.command-cta:before{content:'';position:absolute;inset:0;opacity:.13;background-image:linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent)}.command-cta>div{position:relative;z-index:1}.command-cta p{color:var(--gold);font-size:10px;font-weight:800;letter-spacing:1.7px;margin:0 0 7px}.command-cta h3{font-size:23px;margin:0}.command-cta-actions{text-align:right}.command-cta-actions>a:first-child{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;background:#fff;color:var(--navy);font-size:11px;font-weight:800;border-radius:4px}.command-cta-actions>a:first-child i{color:var(--gold);transition:transform .35s}.command-cta-actions>a:first-child:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,0,0,.2)}.command-cta-actions>a:first-child:hover i{transform:translateX(4px)}.command-whatsapp{display:inline-flex;align-items:center;gap:7px;color:#8be3ad;font-size:11px;font-weight:700;margin:12px 0 0 12px}.command-cta-actions small{display:inline-block;color:#b8c9d4;font-size:11px;margin-top:11px}.command-cta-actions small i{color:var(--gold);margin-right:5px}@keyframes commandLine{from{transform:scaleX(0) rotate(19deg)}to{opacity:.8}}@keyframes slowOrbit{to{transform:rotate(360deg)}}
+        @media(max-width:991px){.command-map{min-height:570px}.project-zone{width:205px}.wire-one,.wire-two{width:230px}.wire-three,.wire-four{width:230px}.ecosystem-flow{margin-bottom:40px}.command-cta{padding:25px}}
+        @media(max-width:767px){.project-command-center{padding:70px 15px}.command-heading{margin-bottom:36px}.command-heading h2{font-size:34px}.command-map{min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:0 0 0 28px}.command-map:before{display:none}.command-wire{left:10px!important;right:auto!important;top:0!important;bottom:auto!important;width:1px!important;height:100%!important;transform:none!important;background:linear-gradient(180deg,transparent,var(--gold) 8%,var(--gold) 92%,transparent);animation:none}.command-wire:after{display:none}.project-core{position:relative;left:auto;top:auto;transform:none;width:170px;height:170px;margin:0 auto 28px;order:-1}.project-zone,.zone-generation,.zone-structure,.zone-protection,.zone-monitoring{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;min-height:0;border-radius:14px;padding:21px 19px;margin:0}.project-zone:before{content:'';position:absolute;left:-33px;top:29px;width:9px;height:9px;border:2px solid var(--gold);border-radius:50%;background:var(--ecosystem-bg)}.project-zone h3{font-size:16px}.ecosystem-flow{grid-template-columns:1fr;gap:0;margin:36px 0 34px}.ecosystem-flow>div{display:grid;grid-template-columns:30px 1fr;border-right:0;border-bottom:1px solid var(--line);padding:13px 8px}.ecosystem-flow>div:last-child{border-bottom:0}.ecosystem-flow b{grid-row:span 2}.ecosystem-flow strong{margin:0}.ecosystem-flow span{grid-column:2}.command-cta{display:block;border-radius:18px;padding:26px 21px}.command-cta h3{font-size:22px;line-height:1.2}.command-cta-actions{text-align:left;margin-top:22px}.command-cta-actions>a:first-child{width:100%;justify-content:center}.command-whatsapp{margin-left:0;margin-right:12px}}
+        @media(prefers-reduced-motion:reduce){.project-command-center .core-ring,.project-command-center .command-wire{animation:none}.project-command-center .project-zone,.project-command-center .command-cta-actions>a{transition:none}}
+        .project-command-center .zone-generation{transition-delay:.08s}.project-command-center .zone-structure{transition-delay:.18s}.project-command-center .zone-protection{transition-delay:.28s}.project-command-center .zone-monitoring{transition-delay:.38s}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sd-navbar sticky-top" id="sdNavbar">
+        <div class="container"><a class="navbar-brand sd-brand" href="index.html"><img src="images/logo.jpeg"
+                    alt="Vaishali Electricals logo"><span>VAISHALI ELECTRICALS<small>Solar &amp; Electrical
+                        Solutions</small></span></a><button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdNav" aria-controls="sdNav" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="sdNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="solarDistributors.html">Solar Distributors</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link sd-nav-cta" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="sd-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 sd-hero-content sd-reveal"><span class="sd-eyebrow">SOLAR PRODUCTS &amp;
+                            MATERIALS</span>
+                        <h1>Complete <span>Solar Materials</span> for Your Project</h1>
+                        <p>Explore a complete range of solar and electrical materials for residential, commercial,
+                            industrial and project requirements.</p>
+                        <div class="d-flex gap-3 flex-wrap sd-hero-buttons"><a class="sd-btn sd-btn-gold"
+                                href="#products">Explore Products <i class="fa-solid fa-arrow-down"></i></a><a
+                                class="sd-btn sd-btn-outline" href="contact.html">Contact Us <i
+                                    class="fa-solid fa-arrow-right"></i></a></div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="sd-hero-visual sd-reveal"><img src="images/solar1-3.jpeg"
+                                alt="Solar panels and project installation" fetchpriority="high">
+                            <div class="sd-glass-card"><i class="fa-solid fa-solar-panel"></i><strong>Solar &amp;
+                                    electrical materials</strong><span>For project requirements</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sd-trust">
+            <div class="container">
+                <div class="sd-trust-box">
+                    <div class="row g-0">
+                        <div class="col-md-3 sd-trust-item"><i class="fa-solid fa-solar-panel"></i>
+                            <div><strong>Solar products</strong><span>Modules and inverters</span></div>
+                        </div>
+                        <div class="col-md-3 sd-trust-item"><i class="fa-solid fa-screwdriver-wrench"></i>
+                            <div><strong>Electrical materials</strong><span>Supporting components</span></div>
+                        </div>
+                        <div class="col-md-3 sd-trust-item"><i class="fa-solid fa-industry"></i>
+                            <div><strong>Project requirements</strong><span>Residential to industrial</span></div>
+                        </div>
+                        <div class="col-md-3 sd-trust-item"><i class="fa-solid fa-comments"></i>
+                            <div><strong>Enquiry support</strong><span>Discuss your requirement</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sd-section sd-section-light" id="products">
+            <div class="container">
+                <div class="sd-heading sd-reveal"><span class="sd-eyebrow">SOLAR PRODUCTS &amp; MATERIALS</span>
+                    <h2>Complete Solar Material Range</h2>
+                    <p>We provide a comprehensive range of solar and electrical materials required for residential,
+                        commercial, industrial and project installations.</p>
+                </div>
+                <div class="sd-catalog-tools">
+                    <div class="sd-search"><i class="fa-solid fa-magnifying-glass"></i><input id="productSearch"
+                            type="search" placeholder="Search solar materials..." aria-label="Search solar materials">
+                    </div>
+                    <div class="sd-filter-wrap" role="tablist" aria-label="Product categories"><button
+                            class="sd-filter active" data-category="all">All Products</button><button class="sd-filter"
+                            data-category="solar">Solar Modules</button><button class="sd-filter"
+                            data-category="inverter">Inverters</button><button class="sd-filter"
+                            data-category="mounting">Mounting</button><button class="sd-filter"
+                            data-category="cable">Cables</button><button class="sd-filter"
+                            data-category="protection">Protection</button><button class="sd-filter"
+                            data-category="earthing">Earthing</button><button class="sd-filter"
+                            data-category="connector">Connectors</button><button class="sd-filter"
+                            data-category="metering">Meters &amp; Monitoring</button><button class="sd-filter"
+                            data-category="safety">Safety</button><button class="sd-filter"
+                            data-category="installation">Installation</button></div>
+                </div>
+                <div class="row g-4" id="productGrid"></div>
+                <p class="sd-no-results" id="noResults">No matching material found.</p>
+            </div>
+        </section>
+        <section class="project-command-center">
+            <div class="container">
+                <div class="command-heading sd-reveal"><span class="sd-eyebrow"><i></i> PROJECT-READY SUPPORT</span><h2>Everything Your Solar Project Needs</h2><p>From core solar equipment to protection, cabling, monitoring and installation accessories, explore materials suitable for different project requirements.</p></div>
+                <div class="command-map sd-reveal">
+                    <div class="command-wire wire-one"></div><div class="command-wire wire-two"></div><div class="command-wire wire-three"></div><div class="command-wire wire-four"></div>
+                    <div class="project-zone zone-generation sd-reveal"><span class="zone-number">01</span><i class="fa-solid fa-solar-panel"></i><h3>Generation</h3><ul><li>PV Modules</li><li>Grid-Tied Inverter</li></ul><small>Core generation</small></div>
+                    <div class="project-zone zone-structure sd-reveal"><span class="zone-number">02</span><i class="fa-solid fa-layer-group"></i><h3>Structure &amp; Cabling</h3><ul><li>Mounting Structure</li><li>Rails</li><li>DC / AC Cables</li><li>MC4 Connectors</li></ul><small>Installation infrastructure</small></div>
+                    <div class="project-zone zone-protection sd-reveal"><span class="zone-number">03</span><i class="fa-solid fa-shield-halved"></i><h3>Protection</h3><ul><li>DCDB / ACDB</li><li>Isolators</li><li>SPD</li><li>Earthing &amp; Lightning</li></ul><small>Safety &amp; protection</small></div>
+                    <div class="project-zone zone-monitoring sd-reveal"><span class="zone-number">04</span><i class="fa-solid fa-chart-line"></i><h3>Monitoring</h3><ul><li>Meters</li><li>CTs</li><li>Data Logger</li><li>Safety Labels &amp; Hardware</li></ul><small>Monitoring &amp; finishing</small></div>
+                    <div class="project-core"><span class="core-ring ring-one"></span><span class="core-ring ring-two"></span><i class="fa-solid fa-sun"></i><strong>SOLAR PROJECT<br>CORE</strong><small>Material ecosystem<br>for project requirements</small></div>
+                </div>
+                <div class="ecosystem-flow sd-reveal"><div><b>01</b><strong>SELECT</strong><span>Choose suitable materials.</span></div><div><b>02</b><strong>CONFIGURE</strong><span>Match equipment to the system.</span></div><div><b>03</b><strong>PROTECT</strong><span>Include protection and earthing.</span></div><div><b>04</b><strong>MONITOR</strong><span>Support metering requirements.</span></div><div><b>05</b><strong>EXECUTE</strong><span>Proceed with the material package.</span></div></div>
+                <div class="command-cta sd-reveal"><div><p>READY FOR YOUR NEXT PROJECT?</p><h3>Tell us what materials your solar or electrical project requires.</h3></div><div class="command-cta-actions"><a href="contact.html">DISCUSS YOUR REQUIREMENT <i class="fa-solid fa-arrow-right"></i></a><a class="command-whatsapp" href="https://wa.me/919421498382" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry</a><small><i class="fa-solid fa-phone"></i> 9421498382</small></div></div>
+            </div>
+        </section>
+        <section class="sd-section sd-why">
+            <div class="container">
+                <div class="sd-heading sd-reveal"><span class="sd-eyebrow">WHY VAISHALI ELECTRICALS</span>
+                    <h2>A practical route to the right materials.</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 sd-reveal">
+                        <div class="sd-why-card"><i class="fa-solid fa-layer-group"></i>
+                            <h3>Wide Product Range</h3>
+                            <p>Explore solar and electrical materials across core installation categories.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 sd-reveal">
+                        <div class="sd-why-card"><i class="fa-solid fa-bolt"></i>
+                            <h3>Solar &amp; Electrical Materials</h3>
+                            <p>Find products that support complete solar and electrical requirements.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 sd-reveal">
+                        <div class="sd-why-card"><i class="fa-solid fa-compass-drafting"></i>
+                            <h3>Project-Oriented Requirements</h3>
+                            <p>Discuss specifications in the context of your project and application.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 sd-reveal">
+                        <div class="sd-why-card"><i class="fa-solid fa-headset"></i>
+                            <h3>Direct Enquiry Support</h3>
+                            <p>Connect with the team for product information and availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sd-section">
+            <div class="container">
+                <div class="sd-heading sd-reveal"><span class="sd-eyebrow">HOW IT WORKS</span>
+                    <h2>From requirement to enquiry.</h2>
+                    <p>A simple way to start a product conversation.</p>
+                </div>
+                <div class="sd-steps">
+                    <div class="sd-step sd-reveal"><b>01</b>
+                        <div>
+                            <h3>Tell Us Your Requirement</h3>
+                            <p>Share the material or project need you are working with.</p>
+                        </div>
+                    </div>
+                    <div class="sd-step sd-reveal"><b>02</b>
+                        <div>
+                            <h3>Discuss Product &amp; Specification</h3>
+                            <p>Review the relevant product type and specification.</p>
+                        </div>
+                    </div>
+                    <div class="sd-step sd-reveal"><b>03</b>
+                        <div>
+                            <h3>Connect With Our Team</h3>
+                            <p>Continue the enquiry with Vaishali Electricals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"><a class="sd-btn sd-btn-gold" href="contact.html">Contact Us <i
+                            class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+        <section class="sd-cta">
+            <div class="container sd-cta-content">
+                <h2>Looking for Solar Materials?</h2>
+                <p>Share your requirement with our team and connect with us for product information and availability.
+                </p>
+                <div class="sd-cta-actions"><a class="sd-btn sd-btn-gold" href="contact.html">Contact Us <i
+                            class="fa-solid fa-arrow-right"></i></a><a class="sd-btn sd-btn-outline"
+                        href="tel:9421498382"><i class="fa-solid fa-phone"></i> Call Now</a></div>
+            </div>
+        </section>
+        <section class="sd-section sd-contact">
+            <div class="container">
+                <div class="sd-heading sd-reveal"><span class="sd-eyebrow">CONTACT INFORMATION</span>
+                    <h2>Start with a product conversation.</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="sd-contact-card">
+                            <h3>VAISHALI ELECTRICALS</h3>
+                            <p>Solar &amp; Electrical Solutions</p>
+                            <div class="sd-contact-line"><i class="fa-solid fa-location-dot"></i><span>Manjari BK, Hadapsar,<br>
+                                    Pune, Maharashtra - 412307</span></div><a class="sd-contact-line"
+                                href="tel:9421498382"><i class="fa-solid fa-phone"></i><span>9421498382</span></a><a
+                                class="sd-contact-line" href="tel:9422119914"><i
+                                    class="fa-solid fa-phone"></i><span>9422119914</span></a><a class="sd-contact-line"
+                                href="mailto:vaishalielectricals77@gmail.com"><i
+                                    class="fa-solid fa-envelope"></i><span>vaishalielectricals77@gmail.com</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="sd-contact-card">
+                            <h3>Discuss your requirement</h3>
+                            <p>Use the enquiry page to share the material, specification or project context you would
+                                like to discuss.</p><a class="sd-btn sd-btn-gold" href="contact.html">Open Enquiry Page
+                                <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="sd-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h3>VAISHALI ELECTRICALS</h3>
+                    <p>Solar &amp; Electrical Solutions for residential, commercial, industrial and project
+                        requirements.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Company</h5><a href="index.html">Home</a><a href="aboutus.html">About</a><a
+                        href="index.html#services">Services</a><a href="index.html#projects">Projects</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5>Solar Products</h5><a href="#products">Solar PV Modules</a><a href="#products">Grid-Tied
+                        Inverter</a><a href="#products">Mounting Structures</a><a href="#products">Solar Cables</a><a
+                        href="#products">Protection &amp; Earthing</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact</h5><a href="tel:9421498382">9421498382</a><a href="tel:9422119914">9422119914</a><a
+                        href="mailto:vaishalielectricals77@gmail.com">vaishalielectricals77@gmail.com</a><a
+                        href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="sd-footer-bottom">© 2026 Vaishali Electricals. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const products = [
+            ['Solar PV Modules', 'Mono PERC / TOPCon, as per project capacity', 'fa-solar-panel', 'solar'], ['Grid-Tied Inverter', '1-phase / 3-phase', 'fa-plug-circle-bolt', 'inverter'], ['Module Mounting Structure', 'GI / Aluminium', 'fa-layer-group', 'mounting'], ['Mounting Rails', 'Aluminium / GI', 'fa-bars', 'mounting'], ['Mid Clamps', 'Module-compatible', 'fa-grip-lines', 'mounting'], ['End Clamps', 'Module-compatible', 'fa-grip-lines-vertical', 'mounting'], ['Structure Fasteners', 'SS 304 / suitable grade', 'fa-screwdriver-wrench', 'mounting'], ['DC Solar Cable', '4 / 6 sq.mm', 'fa-cable-car', 'cable'], ['AC Cable', 'As per inverter / load calculation', 'fa-bolt', 'cable'], ['MC4 Connectors', 'Male & Female', 'fa-link', 'connector'], ['DCDB', 'With DC MCB / Fuse & SPD', 'fa-box', 'protection'], ['ACDB', 'With MCB / MCCB & SPD', 'fa-boxes-stacked', 'protection'], ['DC Isolator', 'Suitable DC voltage / current', 'fa-toggle-on', 'protection'], ['AC Isolator', 'Suitable rating', 'fa-power-off', 'protection'], ['DC SPD', 'Type 2 / as required', 'fa-shield-halved', 'protection'], ['AC SPD', 'Type 2 / as required', 'fa-shield', 'protection'], ['Earthing Kit', 'Chemical / GI / Copper, as applicable', 'fa-bolt', 'earthing'], ['Earthing Cable / Strip', 'GI / Copper', 'fa-grip-lines', 'earthing'], ['Lightning Arrester', 'If required by design', 'fa-cloud-bolt', 'earthing'], ['Earthing Clamps', 'Suitable type', 'fa-link', 'earthing'], ['Cable Tray', 'GI / Aluminium', 'fa-bars-staggered', 'cable'], ['Cable Glands', 'Suitable size', 'fa-circle-notch', 'cable'], ['Cable Lugs', 'Copper / Aluminium', 'fa-plug', 'connector'], ['Ferrules', 'Various sizes', 'fa-tags', 'connector'], ['MC4 Branch Connectors', 'As required', 'fa-code-branch', 'connector'], ['Cable Ties', 'UV-resistant', 'fa-link', 'installation'], ['Cable Clips', 'UV-resistant', 'fa-paperclip', 'installation'], ['Junction Box', 'As required', 'fa-box', 'installation'], ['Generation / Energy Meter', 'As per utility requirement', 'fa-gauge-high', 'metering'], ['CTs', 'If required', 'fa-wave-square', 'metering'], ['Net Meter', 'Utility specification', 'fa-chart-line', 'metering'], ['Wi-Fi / Data Logger', 'Inverter compatible', 'fa-wifi', 'metering'], ['AC / DC Labels', 'Safety & identification', 'fa-tags', 'safety'], ['Danger Boards', 'Electrical safety', 'fa-triangle-exclamation', 'safety'], ['Solar Panel Cleaning Equipment', 'Brush / wiper / water system', 'fa-brush', 'installation'], ['Installation Hardware', 'Nuts, bolts, washers, etc.', 'fa-toolbox', 'installation']
+        ];
+        const grid = document.getElementById('productGrid'); const search = document.getElementById('productSearch'); const filters = [...document.querySelectorAll('.sd-filter')]; const noResults = document.getElementById('noResults'); let activeCategory = 'all';
+        function renderProducts() { const query = search.value.trim().toLowerCase(); grid.innerHTML = ''; let matches = 0; products.forEach(([name, spec, icon, category], index) => { if ((activeCategory === 'all' || category === activeCategory) && (`${name} ${spec}`).toLowerCase().includes(query)) { matches++; const card = document.createElement('div'); card.className = 'col-md-6 col-lg-4 sd-reveal visible'; card.innerHTML = `<article class="sd-product-card"><span class="sd-number">${String(index + 1).padStart(2, '0')}</span><div class="sd-product-icon"><i class="fa-solid ${icon}"></i></div><h3>${name}</h3><p><span class="sd-spec-label">Typical specification</span>${spec}</p><a class="sd-enquire" href="contact.html?product=${encodeURIComponent(name)}">Enquire Now <i class="fa-solid fa-arrow-right"></i></a></article>`; grid.appendChild(card) } }); noResults.classList.toggle('show', matches === 0) }
+        search.addEventListener('input', renderProducts); filters.forEach(filter => filter.addEventListener('click', () => { filters.forEach(item => item.classList.remove('active')); filter.classList.add('active'); activeCategory = filter.dataset.category; renderProducts() })); renderProducts();
+        const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target) } }), { threshold: .12 }); document.querySelectorAll('.sd-reveal:not(.visible)').forEach(item => revealObserver.observe(item));
+        window.addEventListener('scroll', () => document.getElementById('sdNavbar').classList.toggle('is-compact', window.scrollY > 30), { passive: true });
+    </script>
+</body>
+
+</html>

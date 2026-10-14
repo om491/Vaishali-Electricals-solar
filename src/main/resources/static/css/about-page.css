@@ -1,0 +1,651 @@
+.about-page {
+    background: #fff;
+}
+
+.about-page .site-header .navbar {
+    min-height: 84px;
+}
+
+.about-page .site-header .brand img.brand-mark {
+    width: 62px;
+    height: 62px;
+    border-radius: 10px;
+}
+
+.about-page .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(244, 183, 40, .3);
+}
+
+.about-page .navbar-collapse.show,
+.about-page .navbar-collapse.collapsing {
+    background: rgba(7, 29, 50, .97);
+    padding: 12px 16px 18px;
+}
+
+.about-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 690px;
+    padding: 130px 0 70px;
+    overflow: hidden;
+    color: #fff;
+    background: #071d32 url("../images/solar1-3.jpeg") center 48% / cover no-repeat;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(3, 20, 38, .94) 0%, rgba(3, 20, 38, .78) 50%, rgba(3, 20, 38, .35) 100%);
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero .hero-label {
+    margin-bottom: 22px;
+    color: #f4b728;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.about-hero h1 {
+    max-width: 780px;
+    margin: 0 0 22px;
+    color: #fff;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: 0;
+}
+
+.about-hero h1 span {
+    color: #f4b728;
+}
+
+.about-hero-copy {
+    max-width: 620px;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, .84);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-hero .hero-buttons {
+    margin-bottom: 28px;
+}
+
+.about-hero .btn {
+    min-height: 50px;
+}
+
+.about-hero-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, .76);
+    font-size: 14px;
+}
+
+.about-hero-location i {
+    color: #f4b728;
+}
+
+.about-page .about-story {
+    background: #f5f7f5;
+}
+
+.about-story-visual {
+    position: relative;
+    min-height: 380px;
+    padding: 0 22px 22px 0;
+}
+
+.about-story-visual::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 82%;
+    height: 82%;
+    border: 1px solid #f4b728;
+    content: "";
+}
+
+.about-story-visual img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(7, 29, 50, .14);
+}
+
+.about-story-caption {
+    position: absolute;
+    right: 10px;
+    bottom: 38px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: calc(100% - 36px);
+    padding: 13px 16px;
+    background: #fff;
+    border-left: 3px solid #f4b728;
+    box-shadow: 0 8px 24px rgba(7, 29, 50, .12);
+    color: #071d32;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-story-caption i,
+.about-capability-list i {
+    color: #3e9a73;
+}
+
+.about-page .about-story .section-heading {
+    max-width: 600px;
+    margin-bottom: 18px;
+    color: #071d32;
+    font-size: 38px;
+    line-height: 1.16;
+    letter-spacing: 0;
+}
+
+.about-story .muted {
+    max-width: 610px;
+    line-height: 1.75;
+}
+
+.about-capability-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 18px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
+    color: #12212d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-capability-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.about-page .text-link {
+    color: #0d654c;
+}
+
+.about-page .section-title h2 {
+    letter-spacing: 0;
+}
+
+.about-services .service-card {
+    min-height: 255px;
+    border-radius: 4px;
+    box-shadow: 0 10px 28px rgba(7, 29, 50, .07);
+}
+
+.about-services .service-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-services .service-card > i {
+    color: #3e9a73;
+}
+
+.about-services .service-card h3 {
+    color: #071d32;
+}
+
+.about-services .service-card p {
+    color: #667684;
+}
+
+.about-services .service-card span {
+    color: #0d654c;
+}
+
+.about-page .why-section {
+    background: #071d32;
+}
+
+.about-page .why-section .section-heading {
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.about-page .why-section .eyebrow {
+    color: #f4b728;
+}
+
+.about-page .light-muted {
+    color: #c0d0d3;
+}
+
+.about-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.about-benefit {
+    min-height: 190px;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, .055);
+}
+
+.about-benefit > i {
+    margin-bottom: 18px;
+    color: #f4b728;
+    font-size: 22px;
+}
+
+.about-benefit h3 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.about-benefit p {
+    margin: 0;
+    color: #c0d0d3;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.about-page .about-projects {
+    background: #f5f7f5;
+}
+
+.about-project-card {
+    position: relative;
+    min-height: 340px;
+    height: 100%;
+    overflow: hidden;
+    background: #071d32;
+}
+
+.about-project-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.about-project-card::after {
+    position: absolute;
+    inset: 28% 0 0;
+    background: linear-gradient(transparent, rgba(7, 29, 50, .9));
+    content: "";
+}
+
+.about-project-card:hover img {
+    transform: scale(1.045);
+}
+
+.about-project-copy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 22px;
+    color: #fff;
+}
+
+.about-project-copy span {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #f4b728;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-project-copy h3 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.about-project-copy p {
+    margin: 0;
+    color: rgba(255, 255, 255, .82);
+    font-size: 13px;
+}
+
+.about-reviews {
+    background: #fff;
+}
+
+.about-review-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    max-width: 850px;
+    min-height: 245px;
+    margin: 0 auto;
+    padding: 34px;
+    border: 1px solid #dce5e5;
+    border-top: 3px solid #f4b728;
+    background: #fff;
+}
+
+.about-review-card > img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-review-stars {
+    margin-bottom: 12px;
+    color: #b18100;
+    letter-spacing: 2px;
+}
+
+.about-review-card blockquote {
+    margin: 0 0 18px;
+    color: #12212d;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-review-card p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.about-review-card p strong {
+    color: #071d32;
+}
+
+.about-review-card p span {
+    color: #667684;
+}
+
+.about-review-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.about-review-control {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #dce5e5;
+    background: #fff;
+    color: #071d32;
+}
+
+.about-review-control:hover {
+    border-color: #f4b728;
+    background: #f4b728;
+}
+
+.about-page .contact-section {
+    background: #071d32;
+}
+
+.about-page .contact-section .section-title h2 {
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.about-page .contact-section .section-title .eyebrow {
+    color: #f4b728;
+}
+
+.about-page .contact-info-box,
+.about-page .contact-form-box {
+    border-radius: 4px;
+}
+
+.about-page .contact-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-page .contact-line > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.about-page .contact-form-box .form-row > div {
+    min-width: 0;
+}
+
+.about-page .contact-form-box input,
+.about-page .contact-form-box select,
+.about-page .contact-form-box textarea {
+    min-width: 0;
+    font-size: 14px;
+}
+
+.about-page .contact-form-box select {
+    min-height: 48px;
+}
+
+.about-page .contact-form-box input:focus,
+.about-page .contact-form-box select:focus,
+.about-page .contact-form-box textarea:focus {
+    box-shadow: 0 0 0 3px rgba(244, 183, 40, .18);
+}
+
+.about-page .contact-form-box .btn {
+    min-height: 48px;
+}
+
+.about-page .form-status {
+    min-height: 20px;
+}
+
+.about-page .footer-contact a {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 991.98px) {
+    .about-page .navbar-collapse.show,
+    .about-page .navbar-collapse.collapsing {
+        margin-top: 8px;
+    }
+
+    .about-hero {
+        min-height: 640px;
+    }
+
+    .about-hero h1 {
+        max-width: 680px;
+        font-size: 50px;
+    }
+
+    .about-page .why-section .section-heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-page .site-header .navbar {
+        min-height: 76px;
+    }
+
+    .about-hero {
+        min-height: 610px;
+        padding-top: 120px;
+        background-position: 58% center;
+    }
+
+    .about-hero-overlay {
+        background: linear-gradient(90deg, rgba(3, 20, 38, .9), rgba(3, 20, 38, .62));
+    }
+
+    .about-story-visual,
+    .about-story-visual img {
+        min-height: 0;
+        height: 340px;
+    }
+
+    .about-review-card {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-page .site-header .brand img.brand-mark {
+        width: 52px;
+        height: 52px;
+    }
+
+    .about-page .site-header .brand strong {
+        font-size: 14px;
+    }
+
+    .about-page .site-header .brand small {
+        font-size: 10px;
+    }
+
+    .about-hero {
+        min-height: 600px;
+        padding: 115px 0 56px;
+    }
+
+    .about-hero .hero-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+        line-height: 1.12;
+    }
+
+    .about-hero-copy {
+        font-size: 16px;
+    }
+
+    .about-hero .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 340px;
+    }
+
+    .about-hero .hero-buttons .btn {
+        width: 100%;
+        padding: 13px 16px;
+        font-size: 14px;
+    }
+
+    .about-page .about-story .section-heading,
+    .about-page .why-section .section-heading {
+        font-size: 31px;
+    }
+
+    .about-capability-list,
+    .about-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-benefit {
+        min-height: 0;
+    }
+
+    .about-project-card {
+        min-height: 300px;
+    }
+
+    .about-review-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 23px;
+    }
+
+    .about-review-card blockquote {
+        font-size: 16px;
+    }
+
+    .about-page .contact-info-box,
+    .about-page .contact-form-box {
+        padding: 22px;
+    }
+
+    .about-page .contact-form-box .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about-page .footer-section {
+        text-align: left;
+    }
+
+    .about-page .footer-section h4::after {
+        margin-left: 0;
+    }
+
+    .about-page .footer-contact p {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 375px) {
+    .about-page .site-header .container {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .about-page .site-header .brand {
+        gap: 8px;
+    }
+
+    .about-page .site-header .brand strong {
+        font-size: 12px;
+    }
+
+    .about-page .site-header .navbar-toggler {
+        padding: 7px 9px;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-page .contact-info-box,
+    .about-page .contact-form-box {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-project-card img {
+        transition: none;
+    }
+
+    .about-project-card:hover img {
+        transform: none;
+    }
+}
